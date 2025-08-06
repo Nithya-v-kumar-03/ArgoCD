@@ -1,4 +1,13 @@
-##### Install ArgoCD
-````
+----create argocd namespace----
+kubectl create ns argocd
 
-$ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+-----Install ArgoCD------
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+------to check port of argocd-----
+kubectl get svc -n argocd
+
+-----to access argocd over UI do port forwarding
+kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
+connect through publick IP:8080 in browser
+
