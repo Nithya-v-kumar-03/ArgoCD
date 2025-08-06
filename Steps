@@ -11,3 +11,17 @@ kubectl get svc -n argocd
 kubectl port-forward svc/argocd-server -n argocd 8080:443 --address 0.0.0.0
 connect through publick IP:8080 in browser
 
+-----to fetch the password for Argocd---
+kubectl get secrets -n argocd
+kubectl get secrets argocd-initial-admin-secret -n argocd -o yaml
+
+copy the password(djNTNWVFTG9VR1VnWGRZag==) >>navigate to base 64 decode n decode it by pasting the password
+userName: admin
+password:v3S5eELoUGUgXdYj
+
+
+------create namespace----
+kubectl create namespace myapp
+
+for the new application creation repository link
+https://gitlab.com/nanuchi/argocd-app-config
