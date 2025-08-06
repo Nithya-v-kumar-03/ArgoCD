@@ -25,4 +25,4 @@ kubectl create namespace myapp
 
 for the new application creation repository link
 https://gitlab.com/nanuchi/argocd-app-config
-repository URL:git@gitlab.com:nanuchi/argocd-app-config.git
+repository URL:https://gitlab.com/nanuchi/argocd-app-config.git
